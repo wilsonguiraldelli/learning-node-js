@@ -1,1 +1,22 @@
- 
+ O que o node?
+    - Javascript no backend
+    - É uma plataforma, não uma linguagem (a linguagem é o js)
+    
+O que é NPM/Yarn
+    - Instalar bibliotecas de terceiros7
+    
+Caracteristicas do Node
+    - Arquitetura event-loop
+        - baseada em eventos
+        - call stack 
+            pilha de eventos(funcao por ex), node processa a partir de um loop "eterno", que sempre executa aguardando algum evento para executar
+    - Node é single-thread
+    - Non-blocking I/O
+        input e output não bloqueiam. Retornos não precisam ser completos, pode ser respondido em partes mantendo a conexão.
+        
+Frameworks
+
+ExpressJs
+    - Não tem opnião, estrtura aberta para criação
+    - Poucas funcionalidades
+    - Micro-serviços, divir a aplicação em varios serviços
