@@ -3,7 +3,7 @@
     - É uma plataforma, não uma linguagem (a linguagem é o js)
     
 O que é NPM/Yarn
-    - Instalar bibliotecas de terceiros7
+    - Instalar bibliotecas de terceiros
     
 Caracteristicas do Node
     - Arquitetura event-loop
@@ -20,3 +20,44 @@ ExpressJs
     - Não tem opnião, estrtura aberta para criação
     - Poucas funcionalidades
     - Micro-serviços, divir a aplicação em varios serviços
+    
+
+API Rest
+
+- Uma requisição é feita por um clientes (Browser ou App).
+- Resposta retornada atraves de uma estrutura de dados
+
+Arquiteturas full MVC - arquiteturas emq em que o backend retorna o html (front) já montado
+
+Rotas e metodos http
+
+    - GET - Buscar informação no BD
+    - POST - Criar informação no BD (possui Body)
+    - PUT - Alterar informção no BD (possui Body)
+    - DELETE - Deletar informação do BD
+    
+    - Beneficios de api REST
+        - Multiplos clientes utilizando a API
+        - Comunicação padronizada com serviços externos (JSON)
+    - Query paramns ficam visiveis na requisição enquando o body não é visivel ao usuário final
+    
+    Headers - informações adicionais que não tem a ver com o conteudo da requisição. Utilizado para autenticações e etc.
+    
+HTTP CODES
+    
+    1xx: informational
+    2xx: Success
+        200: Success
+        201: created
+    3xx: Redirection
+        301: Moved permanently
+        302: Moved
+    4xx: Client error
+        400: Bad request
+        401: Unathorized
+        404: Not found
+    5xx: Server errors
+        500: Internal server error
+    
+        
+        

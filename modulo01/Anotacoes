@@ -1,0 +1,2 @@
+- yarn add nodemon 
+  Dependencia para restartar o server a cada atualização realizada, automaticamente
