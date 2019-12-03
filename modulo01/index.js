@@ -11,6 +11,26 @@ const server = express()
 // passando plugin para que o servidor ouça em JSON
 server.use(express.json());
 
+//Criando um middlware global
+server.use((req, res, next) => {
+  console.log(`Método: ${req.method}; URL: ${req.url}`)
+
+  // função next permite que as proximas funções sejam executadas. Uma vez que apenas a execução do middleware bloqueia os procimos comandos
+  return next()
+})
+
+//criando middleware local
+
+function checkUserExists(req, res, next) {
+  if (!req.body.name) {
+
+    // retornando mensagem do tipo bad request, indicando dados faltando
+    return res.status(400).json({ error: 'User name is required' })
+  }
+
+  return next()
+}
+
 {/* 
   Criando rota GET para teste
   
@@ -49,7 +69,7 @@ server.get('/users', (req, res) => {
 })
 
 // rota de criacao de usuarios
-server.post('/users', (req, res) => {
+server.post('/users', checkUserExists, (req, res) => {
   const { name } = req.body
 
   users.push(name)
@@ -57,7 +77,7 @@ server.post('/users', (req, res) => {
 })
 
 // rota que edita o usuario
-server.put('/users/:index', (req, res) => {
+server.put('/users/:index', checkUserExists, (req, res) => {
   const { index } = req.params;
   const { name } = req.body
 
