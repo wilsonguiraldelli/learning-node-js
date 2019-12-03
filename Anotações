@@ -59,5 +59,17 @@ HTTP CODES
     5xx: Server errors
         500: Internal server error
     
+    
+Pratica:
+
+- yarn init -y
+    cria o arquivo package.json 
+    
+- nodemon
+    Dependencia de desenvolvimento que reinicia o server automaticamente a cada alteração salva
+    
+    yarn add nodemon -D
+    
+    
         
         
