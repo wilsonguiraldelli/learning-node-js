@@ -1,0 +1,6 @@
+Ferramentas
+
+- nodemon
+    Dependencia de desenvolvimento que reinicia o server automaticamente a cada alteração salva
+    
+    yarn add nodemon -D
