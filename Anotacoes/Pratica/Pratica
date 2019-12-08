@@ -1,0 +1,9 @@
+ Utilizando as Migrations.
+ 
+    yarn sequelize migration:create --name=nome_migration
+     - Cria uma migration
+    yarn sequelize db:migrate
+     - executa a ultima migration
+    yarn sequelize db:migrade:undo
+     - executa o callback da ultima migrate
+     

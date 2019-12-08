@@ -1,6 +1,30 @@
 Ferramentas
 
-- nodemon
-    Dependencia de desenvolvimento que reinicia o server automaticamente a cada alteração salva
+ - {Router} from express
+    separar parte de roteamente do express
     
-    yarn add nodemon -D
+ - sucrase 
+    ferramenta para 'tradução' do node para sintax de import e export
+    
+ - Docker
+    Serve para separação de serviços da aplicação
+    - criação de ambientes isolados(containers) 
+    - containers expõe portas para comunicação
+    
+    Principais conceitos:
+    - Imagem -> serviço disponivel do Docker
+        ex: postgres, mysql
+    - Container -> instancia de uma imagem
+    - Docker registry(Docker hub) -> registro de todas as imagens no Docker
+    - Docker file
+        - Receita para criação de uma imagem
+        - Define a maneira que o codigo ira executar
+        
+- Sequelize
+    ferramenta de ORM para abstração de banco de dados relacionais para javaScript
+    
+- Eslint
+    ferramenta para padronização de estilo de codigo
+    
+- Prettier 
+    ferramenta para estialização de codigo. Faz algumas estilizações que o eslint não faz
