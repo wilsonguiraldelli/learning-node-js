@@ -35,3 +35,7 @@ Ferramentas
     
 - JWT
     Ferramenta para geração de tokens de autenticação 
+
+- YUP
+    ferramenta de validação de dados, uma biblioteca de schema validation.
+    Definindo os campos dentro da requisição, passando como função os tipos dos campos

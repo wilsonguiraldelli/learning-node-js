@@ -20,3 +20,22 @@ Autenticando rotas
     - Assina o token
     jwt.sign({payload}, <string unica>, {
     expiresIn: '7d'})
+    
+Validando dados
+
+    yarn add yup
+    
+    import * as yup from 'yup'
+    
+    -- validando um objeto (json)
+    -- definando shape (formato) e validações em formato de função
+    const schema = yup.object().shape({
+        name: yup.string().required()
+    })
+    
+    schema.isValid(req.body) retorna se a requisão está valida de acordo com o formato definido
+    
+    .when('nome campo', (nome campo, field(campo atual) => condição { retorno} )
+    
+    .ondeOf([opções de campos])
+    yup.ref('nome campo referenciado')
