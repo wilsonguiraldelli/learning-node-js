@@ -31,6 +31,18 @@ function checkUserExists(req, res, next) {
   return next()
 }
 
+function checkUserInArray(req, res, next) {
+
+  const user = users[req.params.index]
+  if (!users[req.params.index]) {
+    return res.status(400).json({ error: 'User does not exists' });
+  }
+
+  req.user = user
+  return next()
+
+}
+
 {/* 
   Criando rota GET para teste
   
@@ -48,7 +60,7 @@ function checkUserExists(req, res, next) {
 
 const users = ['Wilson', 'Milena', 'José']
 
-server.get('/users/:index', (req, res) => {
+server.get('/users/:index', checkUserInArray, (req, res) => {
 
   // return res.send('Hello World') - envia um texto
 
@@ -59,12 +71,12 @@ server.get('/users/:index', (req, res) => {
   const { index } = req.params
 
   return res.json({
-    message: `Hello ${users[index]}`
+    message: `Hello ${req.user}`
   })
 })
 
 //rota que lista todos os usuarios
-server.get('/users', (req, res) => {
+server.get('/users', checkUserInArray, (req, res) => {
   res.json(users)
 })
 
@@ -77,7 +89,7 @@ server.post('/users', checkUserExists, (req, res) => {
 })
 
 // rota que edita o usuario
-server.put('/users/:index', checkUserExists, (req, res) => {
+server.put('/users/:index', checkUserExists, checkUserInArray, (req, res) => {
   const { index } = req.params;
   const { name } = req.body
 
@@ -87,7 +99,7 @@ server.put('/users/:index', checkUserExists, (req, res) => {
 })
 
 //rota para deletar usuário 
-server.delete('/users/:index', (req, res) => {
+server.delete('/users/:index', checkUserInArray, (req, res) => {
   const { index } = req.params
 
   users.splice(index, 1)
