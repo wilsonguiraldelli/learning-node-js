@@ -71,3 +71,16 @@ Import e export com SUCRASE
                         udpate() - Atualizar usuário
                         delete() - Remover usuário
                         
+        JWT (Json Web Token)
+            Metodologia de autenticação de API's rest
+            
+            retorna um token que possui as informações de:
+            
+            Header(Tipo de token, algoritimo) - Define o tipo de token gerado
+            
+            Payload(dados adicionais): retorno de informações do usuário
+            
+            Assinatura - garante que o token não foi alterado externamente. Tokens são aprova de edições
+            
+        
+                        

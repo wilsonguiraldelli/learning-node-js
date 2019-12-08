@@ -28,3 +28,10 @@ Ferramentas
     
 - Prettier 
     ferramenta para estialização de codigo. Faz algumas estilizações que o eslint não faz
+    
+- Bcrypt
+    ferramenta para geração de hash
+    criptogração de strings
+    
+- JWT
+    Ferramenta para geração de tokens de autenticação 

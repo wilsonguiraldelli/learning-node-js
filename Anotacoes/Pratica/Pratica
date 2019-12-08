@@ -7,3 +7,16 @@
     yarn sequelize db:migrade:undo
      - executa o callback da ultima migrate
      
+Criptogradando senhas
+
+    yarn add bcryptjs
+    
+    bcrypt.hash(string, <força da criptografia (numerico - default 8)>)
+    
+Autenticando rotas
+
+    yarn add jsonwebtoken
+    
+    - Assina o token
+    jwt.sign({payload}, <string unica>, {
+    expiresIn: '7d'})
