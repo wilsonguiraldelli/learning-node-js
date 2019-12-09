@@ -31,6 +31,12 @@ class User extends Model {
     return this;
   }
 
+  // criando relacionamento de model de User com model de File
+  static associate(models) {
+    // indica que a foreign key avatar_id pertence a tabela de file
+    this.belongsTo(models.File, { foreignKey: 'avatar_id', as: 'avatar' });
+  }
+
   // Metodo de comparação de senha para autenticação de usuario
   checkPassword(password) {
     // as informaçoes do usuario estão dentro do this
