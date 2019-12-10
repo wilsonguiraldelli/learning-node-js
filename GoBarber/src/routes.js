@@ -8,6 +8,7 @@ import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
+import AppointmentController from './app/controllers/AppointmentController';
 
 const routes = new Router();
 const upload = multer(multerConfig);
@@ -17,8 +18,15 @@ routes.post('/sessions', SessionController.store);
 
 // apenas as rotas declaradas após a aplicação do middleware de auth serão validadas
 routes.use(auth);
-routes.put('/users', UserController.update);
+
+// CREATE
+routes.post('/appointments', AppointmentController.store);
+
+// GET
 routes.get('/providers', ProviderController.index);
+
+// UPDATE
+routes.put('/users', UserController.update);
 
 // rota para upload de arquivos passando um arquivo por vez no metodo single pelo campo 'file' no body
 routes.post('/files', upload.single('file'), FileController.store);
