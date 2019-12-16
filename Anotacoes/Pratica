@@ -1,0 +1,11 @@
+Configurando Multer
+
+    - yarn add multer
+    
+    - criar arquivo de configuração multer.js dentro de Config
+    
+    criar configuração de acordo com o projeto. No exemplo abaixo, salvando localmente no repositorio
+
+Date fns
+
+    yarn add date-fns
