@@ -9,3 +9,13 @@ Configurando Multer
 Date fns
 
     yarn add date-fns
+    
+MongoDB
+    Criando imagem do mongo no docker
+    
+    docker run --name rocketseat-mongo -p 27017:27017 -d -t mongo
+
+Mongoose
+    Instalando mongoose
+    
+    - yarn add mongoose

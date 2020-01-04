@@ -3,3 +3,9 @@
 
 - date-fns
     Biblioteca para manipulação de dadas
+
+- Mongo db
+    Banco de dados não relacional
+    
+    - Mongoose
+        ORM para o mongo
